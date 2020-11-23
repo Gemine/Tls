@@ -47,7 +47,7 @@ int main(int argc, char** argv)
     char               buff[1024];
     size_t             len;
     int                ret;
-    char request[1024] = "GET https://localhost:4443/ HTTP/1.1\r\n\r\n";
+    char request[1024] = "POST /data HTTP/1.1\r\nContent-Type: application/x-www-form-urlencoded\r\nContent-Length: 49\r\nConnection: Keep-Alive\r\n\r\nlicenseID=string&content=string&paramsXML=string\n";
     
     /* declare wolfSSL objects */
     WOLFSSL_CTX* ctx;
